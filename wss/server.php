@@ -78,6 +78,18 @@ class Server extends WebSocketServer{
 				"beta"=>$beta,
 				"gamma"=>$gamma,
 			);
+			elseif($type == 'cali'){
+				$boardid = $obj->{'boardid'};
+				$arr = array(
+					"to"=>"board",
+					"cmd"=>'cali'
+				);
+				$package = self::createobjstr($arr);
+				$board = $this->boards[$boardid];
+				if($board){
+					$this->send($board,$package);
+				}
+			}
 			$package = self::createobjstr($arr);
 			$board = $this->boards[$user->boardid];
 			if($board) $this->send($board,$package);

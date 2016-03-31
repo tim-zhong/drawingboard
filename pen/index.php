@@ -16,13 +16,15 @@
 	<input id="submit" type="submit" value="Draw!">
 </form>
 
+<button onclick="callibrate();">Callibrate</button>
+
 <script src="../wss/wss.js"></script>
 
 
 <script>
 
 var debug = 1;
-
+var bid;
 var socket = null;
 var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
 socket = wssconnect(socket,url,'pen');

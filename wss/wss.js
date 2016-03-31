@@ -61,6 +61,7 @@ function registerboard(socket){
 }
 
 function getboard(boardid){
+	bid=boardid;
 	if(!socket || socket == undefined){
 		err('Fail to Get Board , No Available Socket');
 		return false;
@@ -123,7 +124,7 @@ function boardprocess(obj){
 			// t = -az/50;
 
 			if(!originalalpha)originalalpha = alpha;
-			if(!originalalpha)originalbeta = beta;
+			if(!originalbeta)originalbeta = beta;
 
 
 			// document.getElementById('test_square').style.left = currentleft+l+'px';
@@ -163,6 +164,9 @@ function boardprocess(obj){
 	    case "showboardid":
 	    	document.getElementById('boardid').innerHTML = "ID: "+obj.boardid;
 	    	break;
+	    case "cali":
+		    originalbeta = 0;
+		    originalalpha = 0;
 	    default:
 	        err('Saber: invalid cmd'+cmd)
 	}
@@ -177,4 +181,13 @@ function penprocess(obj){
 	    default:
 	        err('Owner: invalid cmd'+cmd)
 	}
+}
+
+function callibrate(){
+	if(!socket || socket == undefined){
+		err('No Available Socket');
+		return false;
+	}
+	var obj = JSON.stringify({'type':"cali",'boardid':bid});
+	socket.send(obj);
 }
