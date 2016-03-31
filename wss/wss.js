@@ -119,11 +119,14 @@ function boardprocess(obj){
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
+			l = ax/1000;
+			t = az/1000;
 
-			document.getElementById('test_square').style.left = currentleft+ax+'px';
-			document.getElementById('test_square').style.top = currenttop+az+'px';
-			currentleft+=(ax+0);
-			currenttop+=(az+0);
+
+			document.getElementById('test_square').style.left = currentleft+l+'px';
+			document.getElementById('test_square').style.top = currenttop+t+'px';
+			if(currentleft<1000) currentleft+=(l+0);
+			if(currenttop<1000) currenttop+=(t+0);
 
 			document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
 			document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
