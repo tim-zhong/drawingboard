@@ -38,14 +38,14 @@ class Server extends WebSocketServer{
 			$this->send($user,$package);
 		}
 		elseif($type == 'getboard'){
-			$saberid = $obj->{'saberid'};
+			$boardid = $obj->{'boardid'};
 			//$user->saberid = $saberid;
 			$arr = array(
 				"to"=>"pen",
 				"cmd"=>'connected'
 			);
 			$package = self::createobjstr($arr);
-			if($this->boards[$saberid]){
+			if($this->boards[$boardid]){
 				$this->send($user,$package);
 			}
 			else $this->send($user,"Couldn't find the Board");
