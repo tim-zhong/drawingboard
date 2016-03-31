@@ -2,7 +2,7 @@
 <html>
 <body>
 <style>
-* {margin: 0; padding: 0;}
+
 body {background: #17293a;}
 canvas {display: block;}
 </style>
@@ -48,7 +48,7 @@ var myy=0;
     this.y = y;
     this.radius = radius;
     this.color = color;
-    this.speed = 0.01 + Math.random() * 0.02;
+    this.speed = 0.2 + Math.random() * 0.02;
     this.offset = -25 + Math.random() * 50;
     this.angle = Math.random() * 360;
     this.targetX = null;
@@ -62,7 +62,7 @@ var myy=0;
     constructor: Particle,
     draw: function(ctx) {
       ctx.save();
-      ctx.globalCompositeOperation = 'lighter';
+      
       ctx.fillStyle = this.color;
       ctx.translate(this.x, this.y);
       ctx.beginPath();
@@ -102,9 +102,9 @@ var myy=0;
     var i, particle;
     for (i = 0; i < count; i++) {
       if (particlesArray === followingParticles) {
-        particle = new Particle(x, y, 10, colors[i]);
+        particle = new Particle(x, y, 2, colors[i]);
       } else {
-        particle = new Particle(x, y, 10,colors[i]);
+        particle = new Particle(x, y, 2,colors[i]);
       }
       particlesArray.push(particle);
     }
@@ -113,7 +113,7 @@ var myy=0;
   function drawFrame() {
     // Update & Redraw the entire screen on each frame
     window.requestAnimationFrame(drawFrame, canvas);
-    ctx.fillStyle = 'rgba(23, 41, 58, 0.12)';
+    ctx.fillStyle = 'rgba(23, 41, 58, 0.0)';
     ctx.fillRect(0, 0, width, height);
     mouseParticles.forEach(rotateParticle);
     followingParticles.forEach(updateParticle)
@@ -125,7 +125,7 @@ var myy=0;
         dx, dy, dist;
 
     rotParticle = mouseParticles[index];
-    speed = 0.0045;
+    speed = 0.1;
     gravity = 0.8;
 
 
@@ -159,9 +159,9 @@ var myy=0;
     var vr, radius, centerX, centerY;
 
     vr = 0.1;
-    radius = width / 50;
-    centerX = myx;
-    centerY = myy;
+    radius = width / 100;
+    centerX = mouse.x;
+    centerY = mouse.y;
 
     // Rotate the particles
     particle.x = centerX + particle.offset + Math.cos(particle.angle) * radius;
@@ -182,6 +182,7 @@ var myy=0;
 
     //particle.draw(ctx);
   }
+
 
 }());
 
