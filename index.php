@@ -2,7 +2,7 @@
 <html>
 <body>
 <style>
-
+* {margin: 0; padding: 0;}
 body {background: #17293a;}
 canvas {display: block;}
 </style>
@@ -17,8 +17,8 @@ canvas {display: block;}
 // var originalleft = window.innerWidth/2;
 // var originaltop = window.innerHeight/2;
 
-var originalleft =500;
-var originaltop = 500;
+var originalleft =window.innerWidth/2;
+var originaltop = window.innerHeight/2;
 
 var originalalpha = 0;
 var originalbeta = 0;
