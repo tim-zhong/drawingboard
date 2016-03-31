@@ -23,7 +23,7 @@ class Server extends WebSocketServer{
 		if($type == 'registerboard'){
 			$user->type="board";
 
-			$boardid = self::randstr(5);
+			$boardid = self::randstr(4);
 
 			$user->boardid = $boardid;
 			$this->boards[$boardid] = $user;
