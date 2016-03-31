@@ -6,6 +6,8 @@
 <body>
 <style>
 span{font-size:40px;}
+
+#test_square{display: block; position: absolute; top:100px; left:100px; background: #dedede; width:50px; height:50px;}
 </style>
 <span id="boardid"></span><br/>
 <span id="ax"></span><br/>
@@ -18,8 +20,13 @@ span{font-size:40px;}
 <span id="beta"></span><br/>
 <span id="gamma"></span><br/>
 
+<div id="test_square">
+</div>
+
 <script src="wss/wss.js"></script>
 <script>
+var currentleft = 100;
+var currenttop = 100;
 
 var socket = null;
 var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";

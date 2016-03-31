@@ -11,7 +11,6 @@
 <span id="betalabel"></span><br/>
 <span id="gammalabel"></span><br/>
 
-
 <form onsubmit="getboard(document.getElementById('boardid').value); return false;" id="penform">
 	<input id="boardid">
 	<input id="submit" type="submit" value="Draw!">
@@ -21,6 +20,7 @@
 
 
 <script>
+
 var debug = 1;
 
 var socket = null;

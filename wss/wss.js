@@ -120,6 +120,11 @@ function boardprocess(obj){
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
 
+			document.getElementById('test_square').left = currentleft+ax+'px';
+			document.getElementById('test_square').top = currenttop+az+'px';
+			currentleft+=ax;
+			currenttop+=az;
+
 			document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
 			document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
 			document.getElementById("az").innerHTML = 'Z acceleration: '+az;
