@@ -102,13 +102,20 @@ function boardprocess(obj){
 	var cmd = obj.cmd;
 
 	switch(cmd) {
-		 case "move":
-		 	var alpha = obj.a;
-		 	var beta = obj.b;
-		 	var gamma = obj.g;
-		 	var r = gamma/2.4;
-			var h = 800+(beta*8);
-			var rx = -beta;
+		 case "upadtecoords":
+			 //ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma
+		 	var ax = obj.ax;
+		 	var ay = obj.ay;
+		 	var az = obj.az;
+
+		 	var arAlpha = obj.arAlpha;
+		 	var arBeta = obj.arBeta;
+		 	var arGamma = obj.arGamma;
+
+		 	var alpha = obj.alpha;
+		 	var beta = obj.beta;
+		 	var gamma = obj.gamma;
+
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
@@ -117,6 +124,17 @@ function boardprocess(obj){
 			document.getElementById('sword').style.WebkitTransform = "rotate("+r+"deg)";
 			document.getElementById('sword').style.MozTransform = "rotate("+r+"deg)";
 			document.getElementById('sword').style.height = h+"px";
+
+			document.getElementById("boardid").innerHTML = boardid;
+			document.getElementById("ax").innerHTML = ax;
+			document.getElementById("ay").innerHTML = ay;
+			document.getElementById("az").innerHTML = az;
+			document.getElementById("arAlpha").innerHTML = arAlpha;
+			document.getElementById("arBeta").innerHTML = arBeta;
+			document.getElementById("arGamma").innerHTML = arGamma;
+			document.getElementById("alpha").innerHTML = alpha;
+			document.getElementById("beta").innerHTML = beta;
+			document.getElementById("gamma").innerHTML = gamma;
 	        break;
 	    case "showboardid":
 	    	document.getElementById('boardid').innerHTML = "ID: "+obj.boardid;
