@@ -30,6 +30,7 @@ var connected = 0;
 
 if (window.DeviceMotionEvent==undefined || window.DeviceMotionEvent) {
 	// Don't support
+	alert("Don't Support");
 } 
 else {	
 	var ax;
