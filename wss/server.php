@@ -18,8 +18,11 @@ class Server extends WebSocketServer{
 	protected function process($user,$message){
 		$obj = json_decode($message);
 		$type = $obj->{'type'};
+		$user->type="pen";
 
 		if($type == 'registerboard'){
+			$user->type="board";
+
 			$boardid = self::randstr(5);
 
 			$user->boardid = $boardid;
@@ -42,7 +45,9 @@ class Server extends WebSocketServer{
 				"cmd"=>'connected'
 			);
 			$package = self::createobjstr($arr);
-			if($this->boards[$saberid]) $this->send($user,$package);
+			if($this->boards[$saberid]){
+				$this->send($user,$package);
+			}
 			else $this->send($user,"Couldn't find the Board");
 		}
 		elseif($type == 'mstate'){
