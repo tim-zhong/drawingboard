@@ -122,7 +122,7 @@ function boardprocess(obj){
 
 			document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
 			document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
-			document.getElementById("az").innerHTML = 'Z acceleration: 'az;
+			document.getElementById("az").innerHTML = 'Z acceleration: '+az;
 			document.getElementById("arAlpha").innerHTML = 'Rotation alpha acceleration: '+arAlpha;
 			document.getElementById("arBeta").innerHTML = 'Rotation beta acceleration: '+arBeta;
 			document.getElementById("arGamma").innerHTML = 'Rotation gamma acceleration: '+arGamma;

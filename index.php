@@ -5,7 +5,7 @@
 </head>
 <body>
 <style>
-span{font-size:50px;}
+span{font-size:40px;}
 </style>
 <span id="boardid"></span><br/>
 <span id="ax"></span><br/>
