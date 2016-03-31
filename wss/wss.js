@@ -133,8 +133,8 @@ function boardprocess(obj){
 			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
 			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
 
-			l = originalalpha-alpha/5;
-			t = -beta/5;
+			l = originalalpha-alpha;
+			t = -beta;
 
 
 			document.getElementById('test_square').style.left = currentleft+l+'px';
