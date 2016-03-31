@@ -196,6 +196,11 @@ socket = wssconnect(socket,url,'board');
 
 
 
+var optellen = true;
+var letter = 'B';
+var colorR = 255;
+var colorG = 0;
+var colorB = 0;
 
 function getColor()
 {
