@@ -28,17 +28,13 @@ function wssconnect(socket,url,type){
 
 	socket.onopen = function(){
 		msg('Open successfully');
-		if(type == "saber") registersaber(socket);
+		if(type == "board") registerboard(socket);
 	}
 	socket.onerror = function(){
 		msg('Error occurs');
 	}
 	socket.onclose = function(){
-		msg('Seockt Closed');
-		if(type=='owner'){
-			document.getElementById('handleopened').style.visibility="hidden";
-			document.getElementById('handle').style.visibility="visible";
-		}
+		msg('Socket Closed');
 	}
 	socket.onmessage = function(e){
 		if(e.data.indexOf('{')==-1) msg(e.data);
@@ -55,12 +51,12 @@ function wssconnect(socket,url,type){
 	return socket;
 }
 
-function registersaber(socket){
+function registerboard(socket){
 	if(!socket || socket == undefined){
 		err('Fail to Register, No Available Socket');
 		return false;
 	}
-	var obj = JSON.stringify({'type':"registersaber"});
+	var obj = JSON.stringify({'type':"registerboard"});
 	socket.send(obj);
 }
 
@@ -82,8 +78,9 @@ function sendmotionstate(socket,a,b,g){
 	socket.send(obj);
 }
 
-function saberprocess(obj){
+function boardprocess(obj){
 	var cmd = obj.cmd;
+
 	switch(cmd) {
 		 case "move":
 		 	var alpha = obj.a;
@@ -101,8 +98,8 @@ function saberprocess(obj){
 			document.getElementById('sword').style.MozTransform = "rotate("+r+"deg)";
 			document.getElementById('sword').style.height = h+"px";
 	        break;
-	    case "showsaberid":
-	    	document.getElementById('saberid').innerHTML = "ID: "+obj.saberid;
+	    case "showboardid":
+	    	document.getElementById('boardid').innerHTML = "ID: "+obj.boardid;
 	    	break;
 	    default:
 	        err('Saber: invalid cmd'+cmd)

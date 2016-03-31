@@ -9,7 +9,7 @@ class Server extends WebSocketServer{
 	private $_welcome = 'Hello, welcome to echo server!!';
 	private $_rsuccess = 'Saber has been registered!';
 	private $_gsuccess = 'Saber has been found!';
-	protected $sabers = array();
+	protected $boards = array();
 
 	protected function connected($user){
 		$this->send($user,$this->_welcome);
@@ -18,28 +18,32 @@ class Server extends WebSocketServer{
 	protected function process($user,$message){
 		$obj = json_decode($message);
 		$type = $obj->{'type'};
-		if($type == 'registersaber'){
-			$saberid = self::randstr(5);
-			$user->saberid = $saberid;
-			$this->sabers[$saberid] = $user;
+
+		if($type == 'registerboard'){
+			$boardid = self::randstr(5);
+
+			$user->boardid = $boardid;
+			$this->boards[$boardid] = $user;
+			
 			$arr = array(
-				"to"=>"saber",
-				"cmd"=>'showsaberid',
-				"saberid"=>$saberid
+				"to"=>"board",
+				"cmd"=>'showboardid',
+				"boardid"=>$boardid
 			);
+			
 			$package = self::createobjstr($arr);
 			$this->send($user,$package);
 		}
-		elseif($type == 'getsaber'){
+		elseif($type == 'getboard'){
 			$saberid = $obj->{'saberid'};
-			$user->saberid = $saberid;
+			//$user->saberid = $saberid;
 			$arr = array(
-				"to"=>"owner",
+				"to"=>"pen",
 				"cmd"=>'connected'
 			);
 			$package = self::createobjstr($arr);
-			if($this->sabers[$saberid]) $this->send($user,$package);
-			else $this->send($user,'Could find the Lightsaber');
+			if($this->boards[$saberid]) $this->send($user,$package);
+			else $this->send($user,"Couldn't find the Board");
 		}
 		elseif($type == 'mstate'){
 			$a = $obj->{'a'};
@@ -83,7 +87,7 @@ class Server extends WebSocketServer{
 }
 
 $addr = 'ec2-52-37-132-185.us-west-2.compute.amazonaws.com';
-$port = '9696';
+$port = '9697';
 
 $server = new Server($addr,$port);
 $server->run();
