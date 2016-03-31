@@ -1,5 +1,41 @@
 <!DOCTYPE html>
 <html>
+<body>
+
+<canvas id="myCanvas" width="100%" height="100%" style="border:1px solid #d3d3d3 ;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var originalleft = window.innerWidth/2;
+var originaltop = window.innerHeight/2;
+
+var originalalpha = 0;
+var originalbeta = 0;
+
+var speed = 6;
+
+var currentleft = 600;
+var currenttop = 600;
+
+var socket = null;
+var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
+socket = wssconnect(socket,url,'board');
+
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+//ctx.beginPath();
+
+
+</script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
 <head>
 	<title></title>
 </head>
@@ -42,4 +78,4 @@ socket = wssconnect(socket,url,'board');
 
 </script>	
 </body>
-</html>
+</html> -->
