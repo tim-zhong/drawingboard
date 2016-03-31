@@ -123,7 +123,7 @@ var myy=0;
         dx, dy, dist;
 
     rotParticle = mouseParticles[index];
-    speed = 0.0045;
+    speed = 0.1;
     gravity = 0.8;
 
 
