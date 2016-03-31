@@ -22,8 +22,6 @@
 <script>
 
 var debug = 1;
-var originalalpha = 0;
-var originalalphaset = 0;
 
 var socket = null;
 var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
@@ -69,10 +67,6 @@ else {
 
 	window.ondeviceorientation = function(event) {
 		alpha = Math.round(event.alpha);
-		if(!originalalphaset){
-			originalalpha = alpha;
-			originalalphaset = 1;
-		}
 		beta = Math.round(event.beta);
 		gamma = Math.round(event.gamma);
 		if(connected){

@@ -25,6 +25,8 @@ span{font-size:40px;}
 
 <script src="wss/wss.js"></script>
 <script>
+var originalalpha = 0;
+var originalalphaset = 0;
 var currentleft = 100;
 var currenttop = 100;
 
