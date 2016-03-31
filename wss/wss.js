@@ -140,6 +140,9 @@ function boardprocess(obj){
 			l = originalalpha-alpha;
 			t = -(beta-originalbeta);
 
+			l*=speed;
+			t*= speed;
+
 
 			document.getElementById('test_square').style.left = currentleft+l+'px';
 			document.getElementById('test_square').style.top = currenttop+t+'px';

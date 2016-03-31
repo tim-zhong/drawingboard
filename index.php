@@ -30,6 +30,8 @@ var originalalphaset = 0;
 var originalbeta = 0;
 var originalbetaset = 0;
 
+var speed = 2;
+
 var currentleft = 600;
 var currenttop = 600;
 
