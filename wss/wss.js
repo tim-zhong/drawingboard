@@ -167,6 +167,7 @@ function boardprocess(obj){
 	    case "cali":
 		    originalbeta = 0;
 		    originalalpha = 0;
+		    console.log('Callibrating...');
 	    default:
 	        err('Saber: invalid cmd'+cmd)
 	}
