@@ -104,9 +104,9 @@ function boardprocess(obj){
 	switch(cmd) {
 		 case "upadtecoords":
 			 //ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma
-		 	var ax = obj.ax;
-		 	var ay = obj.ay;
-		 	var az = obj.az;
+		 	var ax = obj.ax+0;
+		 	var ay = obj.ay+0;
+		 	var az = obj.az+0;
 
 		 	var arAlpha = obj.arAlpha;
 		 	var arBeta = obj.arBeta;
@@ -122,8 +122,8 @@ function boardprocess(obj){
 
 			document.getElementById('test_square').style.left = currentleft+ax+'px';
 			document.getElementById('test_square').style.top = currenttop+az+'px';
-			currentleft+=ax;
-			currenttop+=az;
+			currentleft+=(ax+0);
+			currenttop+=(az+0);
 
 			document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
 			document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
