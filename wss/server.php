@@ -46,24 +46,41 @@ class Server extends WebSocketServer{
 			);
 			$package = self::createobjstr($arr);
 			if($this->boards[$boardid]){
+				$user->boardid = $boardid;
 				$this->send($user,$package);
 			}
 			else $this->send($user,"Couldn't find the Board");
 		}
-		elseif($type == 'mstate'){
-			$a = $obj->{'a'};
-			$b = $obj->{'b'};
-			$g = $obj->{'g'};
+		elseif($type == 'phonestate'){
+			//ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma
+			$ax = $obj->{'ax'};
+			$ay = $obj->{'ay'};
+			$az = $obj->{'az'};
+
+			$arAlpha = $obj->{'arAlpha'};
+			$arBeta = $obj->{'arBeta'};
+			$arGamma = $obj->{'arGamma'};
+
+			$alpha = $obj->{'alpha'};
+			$beta = $obj->{'beta'};
+			$gamma = $obj->{'gamma'};
+
 			$arr = array(
-				"to"=>'saber',
-				"cmd"=>'move',
-				"a"=>$a,
-				"b"=>$b,
-				"g"=>$g
+				"to"=>'board',
+				"cmd"=>'upadtecoords',
+				"ax"=>$ax,
+				"ay"=>$ay,
+				"az"=>$az,
+				"arAlpha"=>$arAlpha,
+				"arBeta"=>$arBeta,
+				"arGamma"=>$arGamma,
+				"alpha"=>$alpha,
+				"beta"=>$beta,
+				"gamma"=>$gamma,
 			);
 			$package = self::createobjstr($arr);
-			$saber = $this->sabers[$user->saberid];
-			if($saber) $this->send($saber,$package);
+			$board = $this->boards[$user->boardid];
+			if($board) $this->send($board,$package);
 			else $this->send($user,'Could find the Lightsaber');
 		}
 	}

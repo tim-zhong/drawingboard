@@ -78,6 +78,26 @@ function sendmotionstate(socket,a,b,g){
 	socket.send(obj);
 }
 
+function sendphonedata(socket,ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma){
+	if(!socket || socket == undefined){
+		err('Fail to Get Lightsaber , No Available Socket');
+		return false;
+	}
+	var obj = JSON.stringify({
+		'type':"phonestate",
+		'ax':ax,
+		'ay':ay,
+		'az':az,
+		'arAlpha':arAlpha,
+		'arBeta':arBeta,
+		'arGamma':arGamma,
+		'alpha':alpha,
+		'beta':beta,
+		'gamma':gamma
+	});
+	socket.send(obj);
+}
+
 function boardprocess(obj){
 	var cmd = obj.cmd;
 
@@ -110,7 +130,7 @@ function penprocess(obj){
 	switch(cmd) {
 	    case "connected":
 	        alert('connected');
-	        //connected = 1;
+	        connected = 1;
 	        break;
 	    default:
 	        err('Owner: invalid cmd'+cmd)

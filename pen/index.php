@@ -28,23 +28,32 @@ var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
 socket = wssconnect(socket,url,'pen');
 var connected = 0;
 
-if (window.DeviceMotionEvent==undefined || window.DeviceMotionEvent) {
+if (window.DeviceMotionEvent==undefined || window.DeviceMotionEvent &&debug) {
 	// Don't support
 } 
 else {	
+	var ax;
+	var ay;
+	var az;
+	var arAlpha;
+	var arBeta;
+	var arGamma;
+	var alpha;
+	var beta;
+	var gamma;
 	window.ondevicemotion = function(event) {
-		var ax = Math.round(event.acceleration.x * 1);
-		var ay = Math.round(event.acceleration.y * 1);
-		var az = Math.round(event.acceleration.z * 1);		
+		ax = Math.round(event.acceleration.x * 1);
+		ay = Math.round(event.acceleration.y * 1);
+		az = Math.round(event.acceleration.z * 1);		
 		//ai = Math.round(event.interval * 100) / 100;
 		var rR = event.rotationRate;
 		if (rR != null) {
-			var arAlpha = Math.round(rR.alpha);
-			var arBeta = Math.round(rR.beta);
-			var arGamma = Math.round(rR.gamma);
+			arAlpha = Math.round(rR.alpha);
+			arBeta = Math.round(rR.beta);
+			arGamma = Math.round(rR.gamma);
 		}
 		if(connected){
-			sendorientation(socket,ax,ay,az);
+			sendphonedata(socket,ax,ay,az);
 		}			
 	}
 					
@@ -62,7 +71,12 @@ else {
 		if(connected){
 			sendorientation(socket,alpha,beta,gamma);
 		}
-	}				
+	}
+	if(connected){
+		setInterval(function(){
+		 	sendphonedata(socket,ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma);
+		}, 100);
+	}		
 }
 </script>	
 </body>
