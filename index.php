@@ -4,7 +4,7 @@
 <span id="boardid"></span><br/>
 <style>
 * {margin: 0; padding: 0;}
-body {background: #555555;}
+body {background: #333333;}
 canvas {display: block;}
 #boardid{color:#ffffff;}
 </style>
@@ -24,7 +24,6 @@ function clearCanvas()
 }
 function resetCanvas()
 {
-  deleteCircles();
   clearCanvas();
 }
 
