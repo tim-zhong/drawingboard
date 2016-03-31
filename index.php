@@ -4,18 +4,30 @@
 <span id="boardid"></span><br/>
 <style>
 * {margin: 0; padding: 0;}
-body {background: #17293a;}
+body {background: #555555;}
 canvas {display: block;}
 #boardid{color:#ffffff;}
 </style>
 <span id="boardid"></span><br/>
-<canvas></canvas>
+<canvas id="canvas"></canvas>
 
 <script src="wss/wss.js"></script>
 <script>
 
 // var originalleft = window.innerWidth/2;
 // var originaltop = window.innerHeight/2;
+document.getElementById('canvas').onclick = resetCanvas;
+
+function clearCanvas()
+{
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
+function resetCanvas()
+{
+  deleteCircles();
+  clearCanvas();
+}
+
 
 var myx=0;
 var myy=0;
