@@ -40,11 +40,11 @@ function wssconnect(socket,url,type){
 		if(e.data.indexOf('{')==-1) msg(e.data);
 		else{
 			var obj = JSON.parse(e.data);
-			if(obj.to == "owner"&&obj.to==type){
-				ownerprocess(obj);
+			if(obj.to == "pen"&&obj.to==type){
+				penprocess(obj);
 			}
-			else if(obj.to == "saber"&&obj.to==type){
-				saberprocess(obj);
+			else if(obj.to == "board"&&obj.to==type){
+				boardprocess(obj);
 			}
 		}
 	}
@@ -105,12 +105,12 @@ function boardprocess(obj){
 	        err('Saber: invalid cmd'+cmd)
 	}
 }
-function ownerprocess(obj){
+function penprocess(obj){
 	var cmd = obj.cmd;
 	switch(cmd) {
 	    case "connected":
-	        document.getElementById('handle').style.visibility="hidden";
-	        connected = 1;
+	        alert('connected');
+	        //connected = 1;
 	        break;
 	    default:
 	        err('Owner: invalid cmd'+cmd)
