@@ -81,7 +81,6 @@ var myy=0;
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
     // Get mouse positions
-    mouse = getMousePos(canvas);
     // Two arrays to hold our rotating and 'following' particles
     mouseParticles = [];
     followingParticles = [];
