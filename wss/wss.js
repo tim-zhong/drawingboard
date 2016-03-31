@@ -147,10 +147,8 @@ function boardprocess(obj){
 			//document.getElementById('test_square').style.left = originalleft+l+'px';
 			//document.getElementById('test_square').style.top = originaltop+t+'px';
 
-			console.log(l);
-			console.log(t);
-			ctx.arc(l, t, 20, 0, 2 * Math.PI);
-			ctx.stroke();
+			myx = -l;
+			myy = t;
 
 			// document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
 			// document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
