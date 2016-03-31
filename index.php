@@ -28,7 +28,7 @@ span{font-size:40px;}
 var originalleft = window.innerWidth/2;;
 var originaltop = window.innerHeight/2;
 
-var speed = 1;
+var speed = 2;
 
 var currentleft = 600;
 var currenttop = 600;
