@@ -53,7 +53,7 @@ else {
 			arGamma = Math.round(rR.gamma);
 		}
 		if(connected){
-			sendphonedata(socket,ax,ay,az);
+			sendphonedata(socket,ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma);
 		}			
 	}
 					
@@ -69,13 +69,8 @@ else {
 		beta = Math.round(event.beta);
 		gamma = Math.round(event.gamma);
 		if(connected){
-			sendorientation(socket,alpha,beta,gamma);
+			sendphonedata(socket,ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma);
 		}
-	}
-	if(connected){
-		setInterval(function(){
-		 	sendphonedata(socket,ax,ay,az,arAlpha,arBeta,arGamma,alpha,beta,gamma);
-		}, 100);
 	}		
 }
 </script>	
