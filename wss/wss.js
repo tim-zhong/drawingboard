@@ -119,8 +119,8 @@ function boardprocess(obj){
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
-			l = ax/1000;
-			t = az/1000;
+			l = ax/500;
+			t = az/500;
 
 
 			document.getElementById('test_square').style.left = currentleft+l+'px';
