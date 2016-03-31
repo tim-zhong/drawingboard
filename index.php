@@ -101,9 +101,9 @@ socket = wssconnect(socket,url,'board');
     var i, particle;
     for (i = 0; i < count; i++) {
       if (particlesArray === followingParticles) {
-        particle = new Particle(x, y, 5, colors[i]);
+        particle = new Particle(x, y, 10, colors[i]);
       } else {
-        particle = new Particle(x, y, 5,colors[i]);
+        particle = new Particle(x, y, 10,colors[i]);
       }
       particlesArray.push(particle);
     }
@@ -158,7 +158,7 @@ socket = wssconnect(socket,url,'board');
     var vr, radius, centerX, centerY;
 
     vr = 0.1;
-    radius = width / 100;
+    radius = 0;
     centerX = mouse.x;
     centerY = mouse.y;
 
