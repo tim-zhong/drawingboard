@@ -119,11 +119,6 @@ function boardprocess(obj){
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
-			
-			document.getElementById('sword').style.transform = "rotate("+r+"deg)";
-			document.getElementById('sword').style.WebkitTransform = "rotate("+r+"deg)";
-			document.getElementById('sword').style.MozTransform = "rotate("+r+"deg)";
-			document.getElementById('sword').style.height = h+"px";
 
 			document.getElementById("boardid").innerHTML = boardid;
 			document.getElementById("ax").innerHTML = ax;
