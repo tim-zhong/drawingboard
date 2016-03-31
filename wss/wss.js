@@ -60,12 +60,12 @@ function registerboard(socket){
 	socket.send(obj);
 }
 
-function getsaber(saberid){
+function getboard(saberid){
 	if(!socket || socket == undefined){
-		err('Fail to Get Lightsaber , No Available Socket');
+		err('Fail to Get Board , No Available Socket');
 		return false;
 	}
-	var obj = JSON.stringify({'type':"getsaber",'saberid':saberid.toLowerCase()});
+	var obj = JSON.stringify({'type':"getboard",'boardid':boardid.toLowerCase()});
 	socket.send(obj);
 }
 
