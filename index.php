@@ -17,16 +17,14 @@ canvas {display: block;}
 // var originalleft = window.innerWidth/2;
 // var originaltop = window.innerHeight/2;
 
-var originalleft =window.innerWidth/2;
-var originaltop = window.innerHeight/2;
+var originalleft =500;
+var originaltop = 500;
 
 var originalalpha = 0;
 var originalbeta = 0;
 
-var speed = 1;
+var speed = 6;
 
-var currentleft = 600;
-var currenttop = 600;
 
 var socket = null;
 var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
@@ -48,7 +46,7 @@ var myy=0;
     this.y = y;
     this.radius = radius;
     this.color = color;
-    this.speed = 0.2 + Math.random() * 0.02;
+    this.speed = 0.01 + Math.random() * 0.02;
     this.offset = -25 + Math.random() * 50;
     this.angle = Math.random() * 360;
     this.targetX = null;
@@ -62,7 +60,7 @@ var myy=0;
     constructor: Particle,
     draw: function(ctx) {
       ctx.save();
-      
+      ctx.globalCompositeOperation = 'lighter';
       ctx.fillStyle = this.color;
       ctx.translate(this.x, this.y);
       ctx.beginPath();
@@ -102,9 +100,9 @@ var myy=0;
     var i, particle;
     for (i = 0; i < count; i++) {
       if (particlesArray === followingParticles) {
-        particle = new Particle(x, y, 2, colors[i]);
+        particle = new Particle(x, y, 10, colors[i]);
       } else {
-        particle = new Particle(x, y, 2,colors[i]);
+        particle = new Particle(x, y, 10,colors[i]);
       }
       particlesArray.push(particle);
     }
@@ -113,7 +111,7 @@ var myy=0;
   function drawFrame() {
     // Update & Redraw the entire screen on each frame
     window.requestAnimationFrame(drawFrame, canvas);
-    ctx.fillStyle = 'rgba(23, 41, 58, 0.0)';
+    ctx.fillStyle = 'rgba(23, 41, 58, 0.12)';
     ctx.fillRect(0, 0, width, height);
     mouseParticles.forEach(rotateParticle);
     followingParticles.forEach(updateParticle)
@@ -125,7 +123,7 @@ var myy=0;
         dx, dy, dist;
 
     rotParticle = mouseParticles[index];
-    speed = 0.1;
+    speed = 0.0045;
     gravity = 0.8;
 
 
@@ -159,7 +157,7 @@ var myy=0;
     var vr, radius, centerX, centerY;
 
     vr = 0.1;
-    radius = width / 100;
+    radius = width / 50;
     centerX = myx;
     centerY = myy;
 
@@ -182,7 +180,6 @@ var myy=0;
 
     //particle.draw(ctx);
   }
-
 
 }());
 
