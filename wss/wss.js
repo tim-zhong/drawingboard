@@ -137,7 +137,7 @@ function boardprocess(obj){
 			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
 			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
 
-			l = alpha-originalalpha;
+			l = originalalpha-alpha;
 			t = -(beta-originalbeta);
 
 
