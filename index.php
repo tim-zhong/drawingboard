@@ -31,7 +31,7 @@ var originaltop = window.innerHeight/2;
 var originalalpha = 0;
 var originalbeta = 0;
 
-var speed = 3;
+var speed = 6;
 
 var currentleft = 600;
 var currenttop = 600;
