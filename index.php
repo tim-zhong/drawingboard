@@ -61,7 +61,7 @@ socket = wssconnect(socket,url,'board');
     draw: function(ctx) {
       ctx.save();
       
-      ctx.fillStyle = this.color;
+      ctx.fillStyle = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
       ctx.translate(this.x, this.y);
       ctx.beginPath();
       ctx.arc(0, 0, this.radius, 0, Math.PI * 2, true);
@@ -83,7 +83,7 @@ socket = wssconnect(socket,url,'board');
     // Two arrays to hold our rotating and 'following' particles
     mouseParticles = [];
     followingParticles = [];
-    numParticles = 3;
+    numParticles = 1;
     colors = ['#e74509', '#243d89', '#ffe500'];
 
     // Generate particles to rotate our mouse
@@ -101,9 +101,9 @@ socket = wssconnect(socket,url,'board');
     var i, particle;
     for (i = 0; i < count; i++) {
       if (particlesArray === followingParticles) {
-        particle = new Particle(x, y, 2, colors[i]);
+        particle = new Particle(x, y, 5, colors[i]);
       } else {
-        particle = new Particle(x, y, 2,colors[i]);
+        particle = new Particle(x, y, 5,colors[i]);
       }
       particlesArray.push(particle);
     }
