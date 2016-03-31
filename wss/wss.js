@@ -122,14 +122,17 @@ function boardprocess(obj){
 			// l = ax/50;
 			// t = -az/50;
 
+			if(!originalalpha)originalalpha = alpha;
+			if(!originalalpha)originalbeta = beta;
+
 
 			// document.getElementById('test_square').style.left = currentleft+l+'px';
 			// document.getElementById('test_square').style.top = currenttop+t+'px';
 			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
 			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
 
-			l = -alpha;
-			t = -beta;
+			l = originalalpha-alpha;
+			t = originalbeta-beta;
 
 			l*=speed;
 			t*= speed;
