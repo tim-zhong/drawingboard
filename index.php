@@ -2,13 +2,16 @@
 <html>
 <body>
 
-<canvas id="myCanvas" width="100%" height="100%" style="border:1px solid #d3d3d3 ;">
+<canvas id="myCanvas" width="1000px" height="1000px" style="border:1px solid #d3d3d3 ;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
 
-var originalleft = window.innerWidth/2;
-var originaltop = window.innerHeight/2;
+// var originalleft = window.innerWidth/2;
+// var originaltop = window.innerHeight/2;
+
+var originalleft =500;
+var originaltop = 500;
 
 var originalalpha = 0;
 var originalbeta = 0;
