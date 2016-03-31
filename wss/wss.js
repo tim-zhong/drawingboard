@@ -119,8 +119,17 @@ function boardprocess(obj){
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
-			l = ax/50;
-			t = -az/50;
+			// l = ax/50;
+			// t = -az/50;
+
+
+			// document.getElementById('test_square').style.left = currentleft+l+'px';
+			// document.getElementById('test_square').style.top = currenttop+t+'px';
+			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
+			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
+
+			l = originalalpha-alpha/5;
+			t = -beta/5;
 
 
 			document.getElementById('test_square').style.left = currentleft+l+'px';
