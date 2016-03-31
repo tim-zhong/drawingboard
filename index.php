@@ -61,7 +61,7 @@ socket = wssconnect(socket,url,'board');
     draw: function(ctx) {
       ctx.save();
       
-      ctx.fillStyle = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+      ctx.fillStyle = getColor();
       ctx.translate(this.x, this.y);
       ctx.beginPath();
       ctx.arc(0, 0, this.radius, 0, Math.PI * 2, true);
@@ -194,6 +194,64 @@ socket = wssconnect(socket,url,'board');
 
 }());
 
+
+
+
+function getColor()
+{
+  var colorTransformSpeed = 5;
+  
+  if(letter == 'R')
+  {
+    if(optellen) {
+      colorR += colorTransformSpeed;
+      if(colorR == 255) {
+        letter = 'G';
+        optellen = false;
+      }
+    } else {
+      colorR -= colorTransformSpeed;
+      if(colorR == 0) {
+        letter = 'G';
+        optellen = true;
+      }
+    }
+  }
+  else if(letter == 'G')
+  {
+    if(optellen) {
+      colorG += colorTransformSpeed;
+      if(colorG == 255) {
+        letter = 'B';
+        optellen = false;
+      }
+    } else {
+      colorG -= colorTransformSpeed;
+      if(colorG == 0) {
+        letter = 'B';
+        optellen = true;
+      }
+    }
+  }
+  else
+  {
+    if(optellen) {
+      colorB += colorTransformSpeed;
+      if(colorB == 255) {
+        letter = 'R';
+        optellen = false;
+      }
+    } else {
+      colorB -= colorTransformSpeed;
+      if(colorB == 0) {
+        letter = 'R';
+        optellen = true;
+      }
+    }
+  }
+  
+  return 'rgb(' + colorR + ', ' + colorG + ', ' + colorB + ')';
+}
 </script>
 
 </body>
