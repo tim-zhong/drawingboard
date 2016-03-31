@@ -120,8 +120,8 @@ function boardprocess(obj){
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
 
-			document.getElementById('test_square').left = currentleft+ax+'px';
-			document.getElementById('test_square').top = currenttop+az+'px';
+			document.getElementById('test_square').style.left = currentleft+ax+'px';
+			document.getElementById('test_square').style.top = currenttop+az+'px';
 			currentleft+=ax;
 			currenttop+=az;
 
