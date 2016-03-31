@@ -27,6 +27,9 @@ span{font-size:40px;}
 <script>
 var originalalpha = 0;
 var originalalphaset = 0;
+var originalbeta = 0;
+var originalbetaset = 0;
+
 var currentleft = 600;
 var currenttop = 600;
 

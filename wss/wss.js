@@ -120,6 +120,10 @@ function boardprocess(obj){
 				originalalpha = alpha;
 				originalalphaset = 1;
 			}
+			if(!originalbetaset){
+				originalbeta = beta;
+				originalbetaset = 1;
+			}
 
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
@@ -133,8 +137,8 @@ function boardprocess(obj){
 			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
 			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
 
-			l = originalalpha-alpha;
-			t = -beta;
+			l = alpha-originalalpha;
+			t = -(beta-originalbeta;
 
 
 			document.getElementById('test_square').style.left = currentleft+l+'px';
