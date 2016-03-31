@@ -25,12 +25,10 @@ span{font-size:40px;}
 
 <script src="wss/wss.js"></script>
 <script>
-var originalalpha = 0;
-var originalalphaset = 0;
-var originalbeta = 0;
-var originalbetaset = 0;
+var originalleft = window.innerWidth/2;;
+var originaltop = window.innerHeight/2;
 
-var speed = 2;
+var speed = 1;
 
 var currentleft = 600;
 var currenttop = 600;

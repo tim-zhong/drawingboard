@@ -116,15 +116,6 @@ function boardprocess(obj){
 		 	var beta = obj.beta;
 		 	var gamma = obj.gamma;
 
-		 	if(!originalalphaset){
-				originalalpha = window.innerWidth/2;
-				originalalphaset = 1;
-			}
-			if(!originalbetaset){
-				originalbeta = window.innerHeight/2;
-				originalbetaset = 1;
-			}
-
 	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
 			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
 			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
@@ -144,8 +135,8 @@ function boardprocess(obj){
 			t*= speed;
 
 
-			document.getElementById('test_square').style.left = currentleft+l+'px';
-			document.getElementById('test_square').style.top = currenttop+t+'px';
+			document.getElementById('test_square').style.left = originalleft+l+'px';
+			document.getElementById('test_square').style.top = originaltop+t+'px';
 
 			document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
 			document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
