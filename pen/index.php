@@ -28,7 +28,7 @@ var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
 socket = wssconnect(socket,url,'pen');
 var connected = 0;
 
-if (window.DeviceMotionEvent==undefined || window.DeviceMotionEvent &&debug) {
+if (window.DeviceMotionEvent==undefined || window.DeviceMotionEvent) {
 	// Don't support
 } 
 else {	
