@@ -144,15 +144,15 @@ function boardprocess(obj){
 			ctx.arc(l, t, 50, 0, 2 * Math.PI);
 			ctx.stroke();
 
-			document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
-			document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
-			document.getElementById("az").innerHTML = 'Z acceleration: '+az;
-			document.getElementById("arAlpha").innerHTML = 'Rotation alpha acceleration: '+arAlpha;
-			document.getElementById("arBeta").innerHTML = 'Rotation beta acceleration: '+arBeta;
-			document.getElementById("arGamma").innerHTML = 'Rotation gamma acceleration: '+arGamma;
-			document.getElementById("alpha").innerHTML = 'Rotation alpha: '+alpha;
-			document.getElementById("beta").innerHTML = 'Rotation beta: '+beta;
-			document.getElementById("gamma").innerHTML = 'Rotation gamma: '+gamma;
+			// document.getElementById("ax").innerHTML = 'X acceleration: '+ax;
+			// document.getElementById("ay").innerHTML = 'Y acceleration: '+ay;
+			// document.getElementById("az").innerHTML = 'Z acceleration: '+az;
+			// document.getElementById("arAlpha").innerHTML = 'Rotation alpha acceleration: '+arAlpha;
+			// document.getElementById("arBeta").innerHTML = 'Rotation beta acceleration: '+arBeta;
+			// document.getElementById("arGamma").innerHTML = 'Rotation gamma acceleration: '+arGamma;
+			// document.getElementById("alpha").innerHTML = 'Rotation alpha: '+alpha;
+			// document.getElementById("beta").innerHTML = 'Rotation beta: '+beta;
+			// document.getElementById("gamma").innerHTML = 'Rotation gamma: '+gamma;
 	        break;
 	    case "showboardid":
 	    	document.getElementById('boardid').innerHTML = "ID: "+obj.boardid;
