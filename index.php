@@ -5,6 +5,8 @@
 <canvas id="myCanvas" width="1000px" height="1000px" style="border:1px solid #d3d3d3 ;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
+
+<script src="wss/wss.js"></script>
 <script>
 
 // var originalleft = window.innerWidth/2;
