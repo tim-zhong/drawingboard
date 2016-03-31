@@ -64,7 +64,9 @@ class Server extends WebSocketServer{
 	}
 
 	protected function closed($user){
-		unset($this->sabers[$user->saberid]);
+		if($user->boardid){
+			unset($this->boards[$user->boardid]);
+		}
 	}
 
 	public function __destruct(){
