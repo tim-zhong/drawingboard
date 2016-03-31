@@ -131,11 +131,17 @@ function boardprocess(obj){
 			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
 			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
 
+			//center 
 			l = originalalpha-alpha;
 			t = originalbeta-beta;
 
+			//set the speed
 			l*=speed;
 			t*= speed;
+
+			//from starting point
+			l+=originalleft;
+			t+=originaltop;
 
 
 			//document.getElementById('test_square').style.left = originalleft+l+'px';
