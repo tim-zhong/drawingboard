@@ -23,7 +23,7 @@ var originaltop = 500;
 var originalalpha = 0;
 var originalbeta = 0;
 
-var speed = 6;
+var speed = 1;
 
 var currentleft = 600;
 var currenttop = 600;
