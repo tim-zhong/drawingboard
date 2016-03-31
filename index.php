@@ -160,8 +160,8 @@ var myy=0;
 
     vr = 0.1;
     radius = width / 100;
-    centerX = mouse.x;
-    centerY = mouse.y;
+    centerX = myx;
+    centerY = myy;
 
     // Rotate the particles
     particle.x = centerX + particle.offset + Math.cos(particle.angle) * radius;
