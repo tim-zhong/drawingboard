@@ -60,7 +60,7 @@ function registerboard(socket){
 	socket.send(obj);
 }
 
-function getboard(saberid){
+function getboard(boardid){
 	if(!socket || socket == undefined){
 		err('Fail to Get Board , No Available Socket');
 		return false;

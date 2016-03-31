@@ -7,7 +7,7 @@ class WebSocketUser {
   public $headers = array();
   public $handshake = false;
   public $type;
-  public $boardid;
+  public $boardid = "";
 
   public $handlingPartialPacket = false;
   public $partialBuffer = "";
