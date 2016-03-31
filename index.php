@@ -16,16 +16,16 @@ canvas {display: block;}
 
 // var originalleft = window.innerWidth/2;
 // var originaltop = window.innerHeight/2;
-document.getElementById('canvas').onclick = resetCanvas;
+// document.getElementById('canvas').onclick = resetCanvas;
 
-function clearCanvas()
-{
-  context.clearRect(0, 0, canvas.width, canvas.height);
-}
-function resetCanvas()
-{
-  clearCanvas();
-}
+// function clearCanvas()
+// {
+//   document.getElementById('canvas').clearRect(0, 0, canvas.width, canvas.height);
+// }
+// function resetCanvas()
+// {
+//   clearCanvas();
+// }
 
 
 var myx=0;
