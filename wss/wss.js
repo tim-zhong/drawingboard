@@ -120,11 +120,6 @@ function boardprocess(obj){
 		 	//debug
 		 	document.getElementById('alphalabel').innerHTML = "  Alpha = "+alpha;
 
-	  		// document.getElementById("alphalabel").innerHTML = "Alpha: " + alpha;
-			// document.getElementById("betalabel").innerHTML = "Beta: " + beta;
-			// document.getElementById("gammalabel").innerHTML = "Gamma: " + gamma;
-			// l = ax/50;
-			// t = -az/50;
 
 			if(!originalalpha)originalalpha = alpha;
 			if(!originalbeta)originalbeta = beta;
@@ -142,13 +137,6 @@ function boardprocess(obj){
 
 			//adjust alpha
 			alpha = alpharounds * 360 + alpha;
-			console.log('alpharounds: '+alpharounds+'  adjusted alpha: '+alpha);
-
-
-			// document.getElementById('test_square').style.left = currentleft+l+'px';
-			// document.getElementById('test_square').style.top = currenttop+t+'px';
-			// if(currentleft<1000&&currentleft>0) currentleft+=(l+0);
-			// if(currenttop<1000&&currenttop>0) currenttop+=(t+0);
 
 			//center 
 			l = originalalpha-alpha;
@@ -162,9 +150,6 @@ function boardprocess(obj){
 			l+=originalleft;
 			t+=originaltop;
 
-
-			//document.getElementById('test_square').style.left = originalleft+l+'px';
-			//document.getElementById('test_square').style.top = originaltop+t+'px';
 
 			myx = l;
 			myy = t;
