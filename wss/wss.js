@@ -132,13 +132,16 @@ function boardprocess(obj){
 			if(lastalpha == -1) lastalpha = alpha;//initialize lastalpha
 			if(lastalpha >= 0 && Math.abs(alpha - lastalpha)> 200){
 				if(alpha > lastalpha){
-					console.log('right!');
+					rounds++;
 				}
 				else{
-					console.log('left!');
+					rounds--;
 				}
 			}
 			lastalpha = alpha;
+
+			//adjust alpha
+			alpha = rounds * 360 + alpha;
 
 
 			// document.getElementById('test_square').style.left = currentleft+l+'px';
