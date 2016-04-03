@@ -188,10 +188,10 @@ function penprocess(obj){
 }
 
 function callibrate(){
-	// if(!socket || socket == undefined){
-	// 	err('No Available Socket');
-	// 	return false;
-	// }
-	// var obj = JSON.stringify({'type':"cali",'boardid':bid});
-	// socket.send(obj);
+	if(!socket || socket == undefined){
+		err('No Available Socket');
+		return false;
+	}
+	var obj = JSON.stringify({'type':"cali",'boardid':bid});
+	socket.send(obj);
 }
