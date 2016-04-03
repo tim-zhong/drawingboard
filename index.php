@@ -46,11 +46,13 @@ var currenttop = 600;
 var socket = null;
 var url = "ws://ec2-52-37-132-185.us-west-2.compute.amazonaws.com:9697";
 socket = wssconnect(socket,url,'board');
+var ctx,canvas;
 
+//Drawing function
 (function() {
   'use strict';
   // Declare us some global vars
-  var canvas, ctx, width, height, mouseParticles, followingParticles, mouse, numParticles, colors;
+  var width, height, mouseParticles, followingParticles, mouse, numParticles, colors;
 
   // Generic Particle constructor
   function Particle(x, y, radius, color) {
@@ -268,6 +270,10 @@ function getColor()
   }
   
   return 'rgb(' + colorR + ', ' + colorG + ', ' + colorB + ')';
+}
+
+function clearcanvas(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 </script>
 
