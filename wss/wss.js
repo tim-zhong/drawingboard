@@ -192,6 +192,6 @@ function callibrate(){
 		err('No Available Socket');
 		return false;
 	}
-	var obj = JSON.stringify({'type':"cali",'boardid':bid});
+	var obj = JSON.stringify({'type':"cali",'boardid':bid.toLowerCase()});
 	socket.send(obj);
 }
