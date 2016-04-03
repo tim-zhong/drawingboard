@@ -134,6 +134,7 @@ function boardprocess(obj){
 				if(alpha > lastalpha) console.log('right!');
 				else console.log('left!');
 			}
+			else{lastalpha = alpha;}
 
 
 			// document.getElementById('test_square').style.left = currentleft+l+'px';
