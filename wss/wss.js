@@ -113,9 +113,9 @@ function boardprocess(obj){
 		 	var arBeta = obj.arBeta;
 		 	var arGamma = obj.arGamma;
 
-		 	var alpha = obj.alpha+0;
-		 	var beta = obj.beta+0;
-		 	var gamma = obj.gamma+0;
+		 	var alpha = Number(obj.alpha);
+		 	var beta = Number(obj.beta);
+		 	var gamma = Number(obj.gamma);
 
 		 	//debug
 		 	document.getElementById('alphalabel').innerHTML = "  Alpha = "+alpha;
