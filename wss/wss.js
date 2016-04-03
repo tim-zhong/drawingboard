@@ -113,9 +113,9 @@ function boardprocess(obj){
 		 	var arBeta = obj.arBeta;
 		 	var arGamma = obj.arGamma;
 
-		 	var alpha = obj.alpha;
-		 	var beta = obj.beta;
-		 	var gamma = obj.gamma;
+		 	var alpha = obj.alpha+0;
+		 	var beta = obj.beta+0;
+		 	var gamma = obj.gamma+0;
 
 		 	//debug
 		 	document.getElementById('alphalabel').innerHTML = "  Alpha = "+alpha;
@@ -141,7 +141,7 @@ function boardprocess(obj){
 			lastalpha = alpha;
 
 			//adjust alpha
-			alpha += Number(alpharounds) * 360 + Number(alpha);
+			alpha += alpharounds * 360 + alpha;
 			console.log('alpharounds: '+alpharounds+'  adjusted alpha: '+alpha);
 
 
