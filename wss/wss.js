@@ -130,9 +130,13 @@ function boardprocess(obj){
 			if(!originalbeta)originalbeta = beta;
 
 			if(lastalpha == -1) lastalpha = alpha;//initialize lastalpha
-			if(lastalpha >= 0 && Math.abs(alpha - lastalpha > 200)){
-				if(alpha > lastalpha) console.log('right!');
-				else console.log('left!');
+			if(lastalpha >= 0 && Math.abs(alpha - lastalpha)> 200){
+				if(alpha > lastalpha){
+					console.log('right!');
+				}
+				else{
+					console.log('left!');
+				}
 			}
 			lastalpha = alpha;
 
