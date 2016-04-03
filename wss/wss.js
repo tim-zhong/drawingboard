@@ -129,6 +129,12 @@ function boardprocess(obj){
 			if(!originalalpha)originalalpha = alpha;
 			if(!originalbeta)originalbeta = beta;
 
+			if(lastalpha == -1) lastalpha = alpha;//initialize lastalpha
+			if(lastalpha >= 0 || Math.abs(alpha - lastalpha > 200)){
+				if(alpha > lastalpha) console.log('right!');
+				else console.log('left!');
+			}
+
 
 			// document.getElementById('test_square').style.left = currentleft+l+'px';
 			// document.getElementById('test_square').style.top = currenttop+t+'px';

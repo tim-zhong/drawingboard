@@ -26,7 +26,8 @@ canvas {display: block;}
 // {
 //   clearCanvas();
 // }
-
+var alpharounds = 0;
+var lastalpha = -1;
 
 var myx=0;
 var myy=0;
