@@ -132,10 +132,10 @@ function boardprocess(obj){
 			if(lastalpha == -1) lastalpha = alpha;//initialize lastalpha
 			if(lastalpha >= 0 && Math.abs(alpha - lastalpha)> 200){
 				if(alpha > lastalpha){
-					alpharounds++;
+					alpharounds--;
 				}
 				else{
-					alpharounds--;
+					alpharounds++;
 				}
 			}
 			lastalpha = alpha;
