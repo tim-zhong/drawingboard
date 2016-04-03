@@ -8,7 +8,7 @@ body {background: #333333;}
 canvas {display: block;}
 #boardid{color:#ffffff;}
 </style>
-<span id="boardid"></span><br/>
+<span id="boardid"></span><span id="alphalabel"></span><br/><br/>
 <canvas id="canvas"></canvas>
 
 <script src="wss/wss.js"></script>
