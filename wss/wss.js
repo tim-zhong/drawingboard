@@ -142,6 +142,7 @@ function boardprocess(obj){
 
 			//adjust alpha
 			alpha = alpharounds * 360 + alpha;
+			console.log('alpharounds: '+alpharounds+'  adjusted alpha: '+alpha);
 
 
 			// document.getElementById('test_square').style.left = currentleft+l+'px';
