@@ -141,8 +141,7 @@ function boardprocess(obj){
 			lastalpha = alpha;
 
 			//adjust alpha
-			alpha = alpha+0;
-			alpha += alpharounds * 360;
+			alpha += Number(alpharounds) * 360 + Number(alpha);
 			console.log('alpharounds: '+alpharounds+'  adjusted alpha: '+alpha);
 
 
