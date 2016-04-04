@@ -45,6 +45,7 @@ body{
 	width:70%;
 }
 #submit{
+	text-align: center;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
@@ -55,6 +56,7 @@ body{
 	background: #ffffff;
 	color:#333333;
 	width:30%;
+	text-transform:uppercase;
 }
 .button{
 	-webkit-box-sizing:border-box;
@@ -85,7 +87,7 @@ body{
 
 <div id="penform" class="row">
 	<input id="boardid" class="fleft" placeholder="Board ID Here">
-	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); return false;">DRAW</div>
+	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); return false;">Start!</div>
 	<div class="clear"></div>
 </div>
 
