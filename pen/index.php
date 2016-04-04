@@ -42,14 +42,19 @@ body{
 	outline:none;
 	text-align: center;
 	font-weight:300;
+	width:70%;
 }
 #submit{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 	border:2px solid #ffffff;
 	font-size:50px;
 	height:100%;
 	padding:10px 40px;
 	background: #ffffff;
 	color:#333333;
+	width:30%;
 }
 .button{
 	-webkit-box-sizing:border-box;
