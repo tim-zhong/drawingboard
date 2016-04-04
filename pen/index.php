@@ -5,18 +5,87 @@
 </head>
 <body>
 <style>
+body{
+	margin:0;
+	font-family:sans-serif;
+	background: #666666;
+	color:#ffffff;
+	font-weight:300;
+}
+.row{
+	width:100%;
+	position:absolute;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding:30px 10px;
+}
+.fleft{float:left;}
+.fright{float:right;}
+.clear{clear:both;}
+#penform{
+	position:relative;
+	background: #333333;
+	padding: 50px 20px;
+	border-bottom: 10px solid rgba(0,0,0,0.2);
+	z-index:999;
+}
+#boardid{
+	font-size:50px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border:2px solid #ffffff;
+	padding:10px 20px;
+	background:rgba(0,0,0,0.5);
+	color:#ffffff;
+	outline:none;
+	text-align: center;
+	font-weight:300;
+}
+#submit{
+	border:2px solid #ffffff;
+	font-size:50px;
+	height:100%;
+	padding:10px 40px;
+	background: rgba(0,0,0,0.5);
+	color:#aaaaaa;
+}
+.button{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border-radius:50%;
+	background:#004400;
+	width:300px;
+	height:300px;
+	font-size:40px;
+	padding-top:125px;
+	margin:50px auto;
+	box-shadow: 5px 5px 10px #000600;
+}
+#functionality{text-align:center;padding-top:0;}
+#functionality_inner{
+	width:90%; background:#cccccc; margin:0 5%; padding: 50px 10px;border-right: 5px solid #222222;border-bottom: 5px solid #222222;top:-900px;position:relative;
+	-webkit-transition:top 250ms;
+	-moz-transition:top 250ms;
+	-0-transition:top 250ms;
+	transition:top 250ms;
+}
 </style>
 
-<span id="alphalabel"></span><br/>
-<span id="betalabel"></span><br/>
-<span id="gammalabel"></span><br/>
+<div id="penform" class="row">
+	<input id="boardid" class="fleft" placeholder="Board ID">
+	<div id="submit" class="fright" onclick="getboard(document.getElementById('boardid').value); return false;">DRAW</div>
+	<div class="clear"></div>
+</div>
 
-<form onsubmit="getboard(document.getElementById('boardid').value); return false;" id="penform">
-	<input id="boardid">
-	<input id="submit" type="submit" value="Draw!">
-</form>
-
-<button onclick="callibrate();">Callibrate</button>
+<div class="row" id="functionality">
+	<div id="functionality_inner">
+		<div id="cali" onclick="callibrate();" class="button">Callibrate</div>
+		<div id="cali" onclick="clearboard();" class="button">Clear Board</div>
+	</div>
+</div>
 
 <script src="../wss/wss.js"></script>
 

@@ -179,7 +179,7 @@ function penprocess(obj){
 	var cmd = obj.cmd;
 	switch(cmd) {
 	    case "connected":
-	        alert('connected');
+	        document.getElementById('functionality_inner').style.top="0px;"
 	        connected = 1;
 	        break;
 	    default:
@@ -194,4 +194,8 @@ function callibrate(){
 	}
 	var obj = JSON.stringify({'type':"cali",'boardid':bid.toLowerCase()});
 	socket.send(obj);
+}
+
+function clearboard(){
+	
 }
