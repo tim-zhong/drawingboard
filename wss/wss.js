@@ -171,6 +171,11 @@ function boardprocess(obj){
 		    originalbeta = 0;
 		    originalalpha = 0;
 		    console.log('Callibrating...');
+		    break;
+		case "clearboard":
+			clearcanvas();
+			console.log('Clearing Canvas...');
+			break;
 	    default:
 	        err('Saber: invalid cmd'+cmd)
 	}
@@ -197,5 +202,10 @@ function callibrate(){
 }
 
 function clearboard(){
-
+	if(!socket || socket == undefined){
+		err('No Available Socket');
+		return false;
+	}
+	var obj = JSON.stringify({'type':"clearboard",'boardid':bid.toLowerCase()});
+	socket.send(obj);
 }

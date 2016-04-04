@@ -71,11 +71,15 @@ body{
 }
 #functionality{text-align:center;padding-top:0;}
 #functionality_inner{
-	width:90%; background:#cccccc; margin:0 5%; padding: 50px 10px;border-right: 5px solid #222222;border-bottom: 5px solid #222222;top:-900px;position:relative;
+	width:90%; background:#cccccc; margin:0 5%; padding: 50px 10px;border-right: 5px solid #222222;border-bottom: 5px solid #222222;top:-1250px;position:relative;
 	-webkit-transition:top 250ms;
 	-moz-transition:top 250ms;
 	-0-transition:top 250ms;
 	transition:top 250ms;
+}
+#closesocket{
+	background:#440000;
+	box-shadow: 5px 5px 10px #060000;
 }
 </style>
 
@@ -88,7 +92,8 @@ body{
 <div class="row" id="functionality">
 	<div id="functionality_inner">
 		<div id="cali" onclick="callibrate();" class="button">Callibrate</div>
-		<div id="cali" onclick="clearboard();" class="button">Clear Board</div>
+		<div id="clearb" onclick="clearboard();" class="button">Clear Board</div>
+		<div id="closesocket" onclick="socket.close();" class="button">Exit</div>
 	</div>
 </div>
 

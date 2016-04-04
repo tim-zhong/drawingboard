@@ -94,6 +94,17 @@ class Server extends WebSocketServer{
 			if($board){
 				$this->send($board,$package);
 			}
+		}elseif($type == 'clearboard'){
+			$boardid = $obj->{'boardid'};
+			$arr = array(
+				"to"=>"board",
+				"cmd"=>'clearboard'
+			);
+			$package = self::createobjstr($arr);
+			$board = $this->boards[$boardid];
+			if($board){
+				$this->send($board,$package);
+			}
 		}
 	}
 
