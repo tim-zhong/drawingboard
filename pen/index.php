@@ -36,7 +36,7 @@ body{
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	border:2px solid #ffffff;
-	padding:10px 20px;
+	padding:30px 20px;
 	background:rgba(0,0,0,0.5);
 	color:#ffffff;
 	outline:none;
@@ -51,7 +51,7 @@ body{
 	border:2px solid #ffffff;
 	font-size:50px;
 	height:100%;
-	padding:10px 40px;
+	padding:30px 40px;
 	background: #ffffff;
 	color:#333333;
 	width:30%;
