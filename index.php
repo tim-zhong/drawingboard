@@ -4,11 +4,11 @@
 <span id="boardid"></span><br/>
 <style>
 * {margin: 0; padding: 0;}
-body {background: #333333;}
+body {background: #333333;font-family:sans-serif;margin:0;}
 canvas {display: block;}
-#boardid{color:#ffffff;}
+#boardid{color:#ffffff;text-transform:uppercase;font-size:30px;position:absolute; top:0 left:0;background: none;padding:0;}
 </style>
-<span id="boardid"></span><span id="alphalabel"></span><br/><br/>
+<span id="boardid">No Connection</span><span id="alphalabel"></span><br/><br/>
 <canvas id="canvas"></canvas>
 
 <script src="wss/wss.js"></script>

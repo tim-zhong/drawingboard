@@ -93,7 +93,7 @@ body{
 	<div id="functionality_inner">
 		<div id="cali" onclick="callibrate();" class="button">Callibrate</div>
 		<div id="clearb" onclick="clearboard();" class="button">Clear Board</div>
-		<div id="closesocket" onclick="socket.close();" class="button">Exit</div>
+		<div id="closesocket" onclick="socket.close(); document.getElementById('functionality_inner').style.top = '-1250px';" class="button">Exit</div>
 	</div>
 </div>
 
