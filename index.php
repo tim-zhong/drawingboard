@@ -7,6 +7,7 @@
 body {background: #333333;font-family:sans-serif;margin:0;}
 canvas {display: block;}
 #boardid{color:#ffffff;text-transform:uppercase;font-size:30px;position:absolute; top:0 left:0;background: none;padding:0;}
+#alphalabel{display:none;}
 </style>
 <span id="boardid"></span><span id="alphalabel"></span><br/><br/>
 <canvas id="canvas"></canvas>
