@@ -98,9 +98,9 @@ class Server extends WebSocketServer{
 	}
 
 	protected function closed($user){
-		if($user->boardid){
-			unset($this->boards[$user->boardid]);
-		}
+		// if($user->boardid){
+		// 	unset($this->boards[$user->boardid]);
+		// }
 	}
 
 	public function __destruct(){
