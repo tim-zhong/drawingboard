@@ -84,7 +84,7 @@ body{
 </style>
 
 <div id="penform" class="row">
-	<input id="boardid" class="fleft" placeholder="Board ID">
+	<input id="boardid" class="fleft" placeholder="Board ID Here">
 	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); return false;">DRAW</div>
 	<div class="clear"></div>
 </div>
