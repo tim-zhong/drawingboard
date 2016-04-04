@@ -48,8 +48,8 @@ body{
 	font-size:50px;
 	height:100%;
 	padding:10px 40px;
-	background: rgba(0,0,0,0.5);
-	color:#aaaaaa;
+	background: #ffffff;
+	color:#333333;
 }
 .button{
 	-webkit-box-sizing:border-box;
@@ -76,7 +76,7 @@ body{
 
 <div id="penform" class="row">
 	<input id="boardid" class="fleft" placeholder="Board ID">
-	<div id="submit" class="fright" onclick="getboard(document.getElementById('boardid').value); return false;">DRAW</div>
+	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); return false;">DRAW</div>
 	<div class="clear"></div>
 </div>
 
