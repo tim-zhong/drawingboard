@@ -179,7 +179,7 @@ function penprocess(obj){
 	var cmd = obj.cmd;
 	switch(cmd) {
 	    case "connected":
-	        document.getElementById('functionality_inner').style.top="0px;"
+	        document.getElementById('functionality_inner').style.top="0px";
 	        connected = 1;
 	        break;
 	    default:
@@ -197,5 +197,5 @@ function callibrate(){
 }
 
 function clearboard(){
-	
+
 }
