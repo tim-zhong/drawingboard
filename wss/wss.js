@@ -170,6 +170,7 @@ function boardprocess(obj){
 	    case "cali":
 		    originalbeta = 0;
 		    originalalpha = 0;
+		    alpharounds = 0;
 		    console.log('Callibrating...');
 		    break;
 		case "clearboard":
