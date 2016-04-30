@@ -53,7 +53,7 @@ class Server extends WebSocketServer{
 			if($this->boards[$boardid]){
 				$user->boardid = $boardid;
 				$this->send($user,$package);
-				$this->send($this->boards[$boardid],'aaa');
+				$this->send($this->boards[$boardid],$bpackage);
 			}
 			else $this->send($user,"Couldn't find the Board");
 		}
