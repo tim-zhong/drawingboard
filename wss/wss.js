@@ -165,7 +165,7 @@ function boardprocess(obj){
 			// document.getElementById("gamma").innerHTML = 'Rotation gamma: '+gamma;
 	        break;
 	    case "showboardid":
-	    	document.getElementById('boardid').innerHTML = "ID: "+obj.boardid;
+	    	document.getElementById('boardid').innerHTML = obj.boardid;
 	    	break;
 	    case "cali":
 		    originalbeta = 0;
@@ -176,6 +176,10 @@ function boardprocess(obj){
 		case "clearboard":
 			clearcanvas();
 			console.log('Clearing Canvas...');
+			break;
+		case "connected":
+			document.getElementById('mask').style.top="-100%";
+			clearcanvas();
 			break;
 	    default:
 	        err('Saber: invalid cmd'+cmd)

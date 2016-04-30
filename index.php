@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>
 <body>
-<span id="boardid"></span><br/>
 <style>
 * {margin: 0; padding: 0;}
 body {background: #333333;font-family:sans-serif;margin:0;}
 canvas {display: block;}
-#boardid{color:#ffffff;text-transform:uppercase;font-size:30px;position:absolute; top:0 left:0;background: none;padding:0;}
+#mask{
+  position:absolute;
+  background:#222222;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+#mask h1{
+  font-size:50px;
+  font-weight:100;
+  letter-spacing:2px;
+  margin-bottom: 30px;
+}
+#mask h2{
+  margin-bottom: 20px;
+}
+#instructions{
+  font-size:20px;
+  font-weight:300;
+}
+#instructions li{
+  padding-top:10px;
+  letter-spacing:1px;
+}
+#mask_inner{
+  position:absolute;
+  width:100%;
+  color:#fdfdfd;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%);
+  text-align:center;
+}
+#boardid{
+  color:#00ffcc;
+}
 #alphalabel{display:none;}
 </style>
-<span id="boardid"></span><span id="alphalabel"></span><br/><br/>
+<div id="mask">
+  <div id="mask_inner">
+    <h1>Welcome to the Drawingboard!!</h1>
+    <h2>Please Follow the instructions below</h2>
+    <ul id="instructions">
+      <li>1. Use your phone to visit <span style="font-style:italic; color:#ffcc00">timzhong.com/drawingboard/pen</span></li>
+      <li>2. Enter <span id="boardid"></span> as the board ID and press "Start"</li>
+    </ul>
+    <div id="boardid"></div>
+  </div>
+</div>
 <canvas id="canvas"></canvas>
 
 <script src="wss/wss.js"></script>
