@@ -87,7 +87,7 @@ body{
 
 <div id="penform" class="row">
 	<input id="boardid" class="fleft" placeholder="Board ID Here">
-	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); window.location.reload(false); return false;">Start!</div>
+	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value);return false;">Start!</div>
 	<div class="clear"></div>
 </div>
 
@@ -95,7 +95,7 @@ body{
 	<div id="functionality_inner">
 		<div id="cali" onclick="callibrate();" class="button">Callibrate</div>
 		<div id="clearb" onclick="clearboard();" class="button">Clear Board</div>
-		<div id="closesocket" onclick="socket.close(); document.getElementById('functionality_inner').style.top = '-1250px';" class="button">Exit</div>
+		<div id="closesocket" onclick="socket.close(); document.getElementById('functionality_inner').style.top = '-1250px'; setTimeout(function(){window.location.reload(false);},250);" class="button">Exit</div>
 	</div>
 </div>
 
