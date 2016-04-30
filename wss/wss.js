@@ -178,9 +178,13 @@ function boardprocess(obj){
 			console.log('Clearing Canvas...');
 			break;
 		case "connected":
-			console.log('a');
 			document.getElementById('mask').style.top="-100%";
+			document.getElementById('mask').style.opacity="0";
 			clearcanvas();
+			break;
+		case "disconnected":
+			document.getElementById('mask').style.top="0";
+			document.getElementById('mask').style.opacity="1";
 			break;
 	    default:
 	        err('Board: invalid cmd'+cmd)

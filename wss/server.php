@@ -115,9 +115,17 @@ class Server extends WebSocketServer{
 	}
 
 	protected function closed($user){
-		// if($user->boardid){
-		// 	unset($this->boards[$user->boardid]);
-		// }
+		if($user->boardid){
+			$boardid=$user->boardid;
+		 	$arr = array(
+				"to"=>"board",
+				"cmd"=>'disconnected'
+			);
+			$package = self::createobjstr($arr);
+			if($this->boards[$boardid]){
+				$this->send($this->boards[$boardid],$package);
+			}
+		}
 	}
 
 	public function __destruct(){

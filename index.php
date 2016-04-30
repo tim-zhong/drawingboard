@@ -12,6 +12,12 @@ canvas {display: block;}
   height:100%;
   top:0;
   left:0;
+  opacity:1
+  -webkit-transition:top 300ms, opacity 300ms;
+  -moz-transition:top 300ms, opacity 300ms;
+  -ms-transition:top 300ms, opacity 300ms;
+  -o-transition:top 300ms, opacity 300ms;
+  transition:top 300ms, opacity 300ms;
 }
 #mask h1{
   font-size:50px;
@@ -38,6 +44,7 @@ canvas {display: block;}
   -webkit-transform:translateY(-50%);
   -moz-transform:translateY(-50%);
   -o-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
   transform:translateY(-50%);
   text-align:center;
 }
