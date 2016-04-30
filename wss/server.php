@@ -41,7 +41,7 @@ class Server extends WebSocketServer{
 			$boardid = $obj->{'boardid'};
 			//$user->saberid = $saberid;
 			$arr = array(
-				"to"=>"board",
+				"to"=>"pen",
 				"cmd"=>'connected'
 			);
 			$package = self::createobjstr($arr);
