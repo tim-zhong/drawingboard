@@ -182,7 +182,7 @@ function boardprocess(obj){
 			clearcanvas();
 			break;
 	    default:
-	        err('Saber: invalid cmd'+cmd)
+	        err('Board: invalid cmd'+cmd)
 	}
 }
 function penprocess(obj){
@@ -193,7 +193,7 @@ function penprocess(obj){
 	        connected = 1;
 	        break;
 	    default:
-	        err('Owner: invalid cmd'+cmd)
+	        err('Pen: invalid cmd'+cmd)
 	}
 }
 
