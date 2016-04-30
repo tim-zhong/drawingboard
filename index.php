@@ -50,6 +50,9 @@ canvas {display: block;}
 }
 #boardid{
   color:#00ffcc;
+  font-family:serif;
+  text-transform:uppercase;
+  font-size:24px;
 }
 #alphalabel{display:none;}
 </style>
