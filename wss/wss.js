@@ -64,7 +64,7 @@ function getboard(boardid){
 	bid=boardid;
 	if(!socket || socket == undefined){
 		err('Fail to Get Board , No Available Socket');
-		socket = new WebSocket(url);
+		return false;
 	}
 	var obj = JSON.stringify({'type':"getboard",'boardid':boardid.toLowerCase()});
 	socket.send(obj);

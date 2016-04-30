@@ -87,7 +87,7 @@ body{
 
 <div id="penform" class="row">
 	<input id="boardid" class="fleft" placeholder="Board ID Here">
-	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); return false;">Start!</div>
+	<div id="submit" class="fleft" onclick="getboard(document.getElementById('boardid').value); window.location.reload(false); return false;">Start!</div>
 	<div class="clear"></div>
 </div>
 
