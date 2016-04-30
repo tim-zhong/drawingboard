@@ -178,6 +178,7 @@ function boardprocess(obj){
 			console.log('Clearing Canvas...');
 			break;
 		case "connected":
+			console.log('connected');
 			document.getElementById('mask').style.top="-100%";
 			clearcanvas();
 			break;
