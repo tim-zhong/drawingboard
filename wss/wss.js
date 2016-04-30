@@ -118,7 +118,7 @@ function boardprocess(obj){
 		 	var gamma = Number(obj.gamma);
 
 		 	//debug
-		 	document.getElementById('alphalabel').innerHTML = "  Alpha = "+alpha;
+		 	//document.getElementById('alphalabel').innerHTML = "  Alpha = "+alpha;
 
 
 			if(!originalalpha)originalalpha = alpha;
