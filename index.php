@@ -61,8 +61,9 @@ canvas {display: block;}
     <h1>Welcome to the Drawingboard!!</h1>
     <h2>Please Follow the instructions below</h2>
     <ul id="instructions">
-      <li>1. Use your phone to visit <span style="font-style:italic; color:#ffcc00">timzhong.com/drawingboard/pen</span></li>
-      <li>2. Enter <span id="boardid"></span> as the board ID and press "Start"</li>
+      <li>1. Open this page on a PC</li>
+      <li>2. Use your phone to visit <span style="font-style:italic; color:#ffcc00">timzhong.com/drawingboard/pen</span></li>
+      <li>3. Enter <span id="boardid"></span> as the board ID and press "Start"</li>
     </ul>
     <div id="boardid"></div>
   </div>
