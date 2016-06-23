@@ -61,7 +61,7 @@ canvas {display: block;}
     <h1>Welcome to the Drawingboard!!</h1>
     <h2>Please Follow the instructions below</h2>
     <ul id="instructions">
-      <li>1. Open this page on your PC</li>
+      <li>1. Open this page with your computer</li>
       <li>2. Use your phone to visit <span style="font-style:italic; color:#ffcc00">timzhong.com/drawingboard/pen</span></li>
       <li>3. Enter <span id="boardid"></span> as the board ID and press "Start"</li>
     </ul>
@@ -334,6 +334,17 @@ function getColor()
 function clearcanvas(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+</script>
+
+<script>//google
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78864604-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 
 </body>
